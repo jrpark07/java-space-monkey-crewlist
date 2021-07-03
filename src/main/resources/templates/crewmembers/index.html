@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <!DOCTYPE html>
+
+  <html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h1>Space Monkey Crew Members of the Glorious Primate Ship Delicious Taco!</h1>
+<div th:each="crewMember: ${crewMembers}">
+  <div th:object="${crewMember}">
+    <h3 th:text="*{name}">Monkey name:</h3>
+    <p>Hobby:<span th:text="*{hobby}">Hobby</span></p>
+    <p>Rank:<span th:text="*{rank}">Rank</span></p>
+    <p>Tours Aboard the Delicious Taco:<span th:text="*{toursAboard}">Tours Aboard</span></p>
+  </div>
+</div>
+</body>
+</html>
